@@ -358,6 +358,58 @@ Next step:
 Transcript:
 - .ai/transcripts/2026-05-02-codex.md#turn-008
 
+## 2026-05-02 04:17 IST - codex - turn-009
+
+User intent:
+- Understand how the proactive handoff/context-limit protocol actually works in practice.
+
+Assistant action:
+- Inspected the protocol, README, context overview, and adapter instructions.
+- Prepared a direct explanation that this is a repo-file protocol followed by AI harnesses, not an automatic background process.
+
+Files inspected:
+- .ai/protocol.md
+- README.md
+- context.md
+- CLAUDE.md
+- AGENTS.md
+
+Files created:
+- None
+
+Files updated:
+- .ai/session-log.md
+- .ai/transcripts/2026-05-02-codex.md
+- .ai/changed-files.md
+- .ai/handoff.md
+
+Files deleted:
+- None
+
+Commands run:
+- sed -n '1,220p' .ai/protocol.md
+- sed -n '1,130p' README.md
+- sed -n '1,120p' context.md
+- sed -n '1,120p' CLAUDE.md && sed -n '1,120p' AGENTS.md
+- date '+%Y-%m-%d %H:%M %Z'
+
+Decisions:
+- Explain the current limitation plainly: no automatic hook exists unless a harness/tool integration supports and follows it.
+
+Assumptions:
+- User wants conceptual clarity, not more implementation yet.
+
+Token metrics:
+- Context capture tokens consumed: 110 estimated
+- Context transfer tokens saved: 450 estimated
+- Token count source: estimated
+
+Next step:
+- Optionally implement stronger automation via harness-specific hooks or wrapper scripts.
+
+Transcript:
+- .ai/transcripts/2026-05-02-codex.md#turn-009
+
 ## 2026-05-02 03:19 IST - codex - turn-004
 
 User intent:

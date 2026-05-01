@@ -2,7 +2,7 @@
 
 ## Current State
 
-IamOmni has been scaffolded as a lightweight AI context protocol project. A root-level `context.md` provides a human-readable overview. Omni token metrics are part of the protocol. `INSTALL.md` documents installation and startup for Claude Code, Codex CLI, Gemini CLI, and OpenCode. The handoff policy is now proactive: `.ai/handoff.md` should be kept current during work and refreshed immediately when 5% or less context remains.
+IamOmni has been scaffolded as a lightweight AI context protocol project. A root-level `context.md` provides a human-readable overview. Omni token metrics are part of the protocol. `INSTALL.md` documents installation and startup for Claude Code, Codex CLI, Gemini CLI, and OpenCode. The handoff policy is proactive: `.ai/handoff.md` should be kept current during work and refreshed immediately when 5% or less context remains. Important limitation: this is currently a repo-file protocol followed by each AI harness, not an automatic background daemon.
 
 ## Important Files
 
@@ -16,7 +16,7 @@ IamOmni has been scaffolded as a lightweight AI context protocol project. A root
 
 ## Next Step
 
-Use the universal startup prompt from `.ai/protocol.md` in Claude, Codex, OpenCode, Gemini CLI, or another tool. Current immediate next step is optional: add `INSTALL.md` references to individual adapter files or push the latest context-limit safety commit.
+Use the universal startup prompt from `.ai/protocol.md` in Claude, Codex, OpenCode, Gemini CLI, or another tool. Current likely next step is to decide whether to keep IamOmni as a protocol-only system or add harness-specific automation/wrappers for stronger enforcement.
 
 ## Verification
 

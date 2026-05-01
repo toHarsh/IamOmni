@@ -240,3 +240,27 @@ Heavily inspected:
 
 Notes:
 - Added proactive context-limit safety policy with a 5% remaining-context handoff trigger.
+
+## 2026-05-02 - codex turn-009
+
+Created:
+- None
+
+Updated:
+- .ai/session-log.md
+- .ai/transcripts/2026-05-02-codex.md
+- .ai/changed-files.md
+- .ai/handoff.md
+
+Deleted:
+- None
+
+Heavily inspected:
+- .ai/protocol.md
+- README.md
+- context.md
+- CLAUDE.md
+- AGENTS.md
+
+Notes:
+- Explained current mechanism and limitation; no protocol code changes.
