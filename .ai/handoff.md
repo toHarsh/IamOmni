@@ -2,7 +2,7 @@
 
 ## Current State
 
-IamOmni has been scaffolded as a lightweight AI context protocol project. A root-level `context.md` provides a human-readable overview. Omni token metrics are now part of the protocol: each session-log entry can record context capture tokens consumed, context transfer tokens saved, and whether counts are exact, estimated, or unavailable. `INSTALL.md` now documents installation and startup for Claude Code, Codex CLI, Gemini CLI, and OpenCode. Git was initialized locally for publishing to `https://github.com/toHarsh/IamOmni.git`.
+IamOmni has been scaffolded as a lightweight AI context protocol project. A root-level `context.md` provides a human-readable overview. Omni token metrics are now part of the protocol: each session-log entry can record context capture tokens consumed, context transfer tokens saved, and whether counts are exact, estimated, or unavailable. `INSTALL.md` now documents installation and startup for Claude Code, Codex CLI, Gemini CLI, and OpenCode. Git was initialized locally and `main` was pushed to `https://github.com/toHarsh/IamOmni.git`.
 
 ## Important Files
 
@@ -16,8 +16,8 @@ IamOmni has been scaffolded as a lightweight AI context protocol project. A root
 
 ## Next Step
 
-Use the universal startup prompt from `.ai/protocol.md` in Claude, Codex, OpenCode, Gemini CLI, or another tool. Current immediate next step is to commit all files, add the GitHub remote, and push to `https://github.com/toHarsh/IamOmni.git`.
+Use the universal startup prompt from `.ai/protocol.md` in Claude, Codex, OpenCode, Gemini CLI, or another tool. Current immediate next step is optional: add `INSTALL.md` references to the individual adapter files.
 
 ## Verification
 
-Verified by direct file reads and targeted `rg` search. Install commands were checked against official docs before being written. Not yet verified by installing/running each AI tool locally. `git diff` could not run because this folder is not a Git repository.
+Verified by direct file reads and targeted `rg` search. Install commands were checked against official docs before being written. Repository was pushed to GitHub successfully. Not yet verified by installing/running each AI tool locally.
