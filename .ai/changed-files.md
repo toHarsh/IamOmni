@@ -212,3 +212,31 @@ Heavily inspected:
 Notes:
 - Initialized Git locally and pushed `main` to `https://github.com/toHarsh/IamOmni.git`.
 - Initial pushed commit: `5a7b4d5 Initial IamOmni context protocol`.
+
+## 2026-05-02 - codex turn-008
+
+Created:
+- None
+
+Updated:
+- .ai/protocol.md
+- README.md
+- context.md
+- .ai/brief.md
+- .ai/session-log.md
+- .ai/transcripts/2026-05-02-codex.md
+- .ai/changed-files.md
+- .ai/handoff.md
+
+Deleted:
+- None
+
+Heavily inspected:
+- .ai/protocol.md
+- README.md
+- context.md
+- .ai/brief.md
+- .ai/handoff.md
+
+Notes:
+- Added proactive context-limit safety policy with a 5% remaining-context handoff trigger.

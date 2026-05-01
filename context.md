@@ -50,7 +50,7 @@ During the session, the AI should:
 - append transcript details to `.ai/transcripts/YYYY-MM-DD-MODEL.md`
 - record token metrics for context captured and context-transfer savings
 - update `.ai/changed-files.md` when files are touched
-- update `.ai/handoff.md` before switching tools, stopping intentionally, or after major changes
+- keep `.ai/handoff.md` current, especially before switching tools, stopping intentionally, after major changes, or when context is nearly full
 
 ## Token Metrics
 
@@ -76,6 +76,14 @@ IamOmni separates context into layers:
 - `protocol.md` defines the rules all tools follow
 
 This gives crash-safety without forcing the model to rewrite large summaries after every message.
+
+## Context Limit Safety
+
+Models may hit context limits before the user knows to ask for a handoff. Omni handles this by treating `.ai/handoff.md` as a live safety file, not only an end-of-session file.
+
+Every AI harness should refresh `.ai/handoff.md` when the current state changes and immediately when 5% or less context remains. If exact context telemetry is unavailable, refresh the handoff after long exchanges, large file reads, major decisions, blockers, or implementation steps.
+
+When context is almost full, update `.ai/handoff.md` first. Then update `.ai/session-log.md`, `.ai/changed-files.md`, and the active transcript file if there is still enough room.
 
 ## Design Rule
 

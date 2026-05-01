@@ -129,6 +129,8 @@ Keep it append-only unless the user asks for cleanup.
 
 Update `.ai/handoff.md`:
 
+- after every exchange when the current state changed
+- immediately when the AI harness reports 5% or less context remaining
 - before switching tools or models
 - before ending intentionally
 - after major implementation changes
@@ -136,6 +138,22 @@ Update `.ai/handoff.md`:
 - after resolving a blocker
 
 The handoff should summarize current state, not the full conversation.
+
+Do not wait until the context limit is reached. If exact remaining-context telemetry is unavailable, treat these as warning signs and refresh `.ai/handoff.md` before continuing:
+
+- the model warns that context is almost full
+- the conversation has become long enough that prior details may be truncated
+- a large file, transcript, log, build output, or diff was read
+- a major decision, blocker, or implementation step just happened
+
+When 5% or less context remains, prioritize this minimal emergency handoff sequence before any other work:
+
+1. Update `.ai/handoff.md` with current state, completed work, blockers, and next step.
+2. Append the current exchange to `.ai/session-log.md`.
+3. Append or summarize the current exchange in the active transcript file.
+4. Update `.ai/changed-files.md` for files touched or heavily inspected.
+
+If there is not enough context left for full bookkeeping, update `.ai/handoff.md` first.
 
 ## Safety Rules
 

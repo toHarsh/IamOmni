@@ -295,6 +295,69 @@ Next step:
 Transcript:
 - .ai/transcripts/2026-05-02-codex.md#turn-007
 
+## 2026-05-02 03:53 IST - codex - turn-008
+
+User intent:
+- Fix the handoff policy so it does not depend on the user knowing when a context limit is about to hit.
+
+Assistant action:
+- Updated the protocol to maintain `.ai/handoff.md` proactively.
+- Added a 5% remaining-context trigger and an emergency handoff priority order.
+- Updated README, context overview, and brief to describe context-limit safety.
+
+Files inspected:
+- .ai/protocol.md
+- README.md
+- context.md
+- .ai/brief.md
+- .ai/handoff.md
+
+Files created:
+- None
+
+Files updated:
+- .ai/protocol.md
+- README.md
+- context.md
+- .ai/brief.md
+- .ai/session-log.md
+- .ai/transcripts/2026-05-02-codex.md
+- .ai/changed-files.md
+- .ai/handoff.md
+
+Files deleted:
+- None
+
+Commands run:
+- sed -n '1,240p' .ai/protocol.md
+- sed -n '1,140p' README.md
+- sed -n '1,140p' context.md
+- sed -n '1,180p' .ai/handoff.md
+- date '+%Y-%m-%d %H:%M %Z'
+- sed -n '105,175p' .ai/protocol.md
+- sed -n '55,95p' README.md
+- sed -n '45,105p' context.md
+- sed -n '7,18p' .ai/brief.md
+- rg -n "5%|context limit|context is almost full|remaining context|handoff" .ai/protocol.md README.md context.md .ai/brief.md
+
+Decisions:
+- Treat `.ai/handoff.md` as a live safety file, not only an end-of-session file.
+- If 5% or less context remains, update `.ai/handoff.md` before other bookkeeping.
+
+Assumptions:
+- AI harnesses may not expose exact remaining-context telemetry, so warning signs are needed as fallback triggers.
+
+Token metrics:
+- Context capture tokens consumed: 130 estimated
+- Context transfer tokens saved: 600 estimated
+- Token count source: estimated
+
+Next step:
+- Commit and push the context-limit safety refinement.
+
+Transcript:
+- .ai/transcripts/2026-05-02-codex.md#turn-008
+
 ## 2026-05-02 03:19 IST - codex - turn-004
 
 User intent:

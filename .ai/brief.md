@@ -8,6 +8,7 @@ Create a model-agnostic context transfer system that works across Claude, Codex,
 
 - Durable context lives in files, not chat memory.
 - Per-turn updates are append-only and compact.
+- Handoff state is maintained proactively before context limits are reached.
 - Full transcript details are stored separately from the main session log.
 - Token metrics track context capture cost and transfer savings when available.
 - Tool-specific files are thin adapters that point to `.ai/protocol.md`.

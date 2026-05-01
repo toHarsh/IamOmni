@@ -61,12 +61,16 @@ Track Omni token metrics for this exchange:
 Prefer exact harness token counts when available; otherwise estimate and mark as estimated.
 ```
 
-## Before Switching Models
+## Context Limit Safety
 
-Ask the current model:
+IamOmni does not rely on a final manual command at the moment a model hits its context limit. Each AI should keep `.ai/handoff.md` current during the session and refresh it immediately when the harness reports 5% or less context remaining.
+
+If exact remaining-context telemetry is unavailable, refresh the handoff after long exchanges, large file reads, major implementation changes, major decisions, or blockers.
+
+Emergency priority when context is almost full:
 
 ```text
-Update .ai/handoff.md, .ai/session-log.md, .ai/changed-files.md, and the current transcript file according to .ai/protocol.md.
+Update .ai/handoff.md first, then .ai/session-log.md, .ai/changed-files.md, and the current transcript file according to .ai/protocol.md.
 ```
 
 ## Crash-Safe Rule
